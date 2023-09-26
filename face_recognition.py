@@ -38,7 +38,7 @@ class Face_Recognition:
         # This part is image labels setting start 
         # first header image  
         img=Image.open(r"college_images\face_detector1.jpg")
-        img=img.resize((650,700),Image.ANTIALIAS)
+        img=img.resize((650,700),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
         # set image as lable
@@ -47,7 +47,7 @@ class Face_Recognition:
 
         # second header image
         bg1=Image.open(r"college_images\facial_recognition.jpg")
-        bg1=bg1.resize((950,700),Image.ANTIALIAS)
+        bg1=bg1.resize((950,700),Image.LANCZOS)
         self.photobg1=ImageTk.PhotoImage(bg1)
 
         # set image as lable
@@ -91,7 +91,7 @@ class Face_Recognition:
 
                 confidence=int((100*(1-predict/300)))
 
-                conn = mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                conn = mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                 cursor = conn.cursor()
 
                 cursor.execute("select Name from student where Student_ID="+str(id))

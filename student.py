@@ -35,7 +35,7 @@ class Student:
         self.var_teacher=StringVar()
 
         img=Image.open(r"college_images\face-recognition.png")
-        img=img.resize((500,130),Image.ANTIALIAS)
+        img=img.resize((500,130),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
         f_lbl=Label(self.root,image=self.photoimg)
@@ -43,7 +43,7 @@ class Student:
              
              #second image
         img1=Image.open(r"college_images\smart-attendance.jpg")
-        img1=img1.resize((500,130),Image.ANTIALIAS)
+        img1=img1.resize((500,130),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
            
         f_lbl=Label(self.root,image=self.photoimg1)
@@ -51,7 +51,7 @@ class Student:
                
                #third image
         img2=Image.open(r"college_images\iStock-182059956_18390_t12.jpg")
-        img2=img2.resize((600,130),Image.ANTIALIAS)
+        img2=img2.resize((600,130),Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
         f_lbl=Label(self.root,image=self.photoimg2)
@@ -60,7 +60,7 @@ class Student:
         #bg image
 
         img3=Image.open(r"college_images\bg.jpg")
-        img3=img3.resize((1530,710),Image.ANTIALIAS)
+        img3=img3.resize((1530,710),Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
         bg_img=Label(self.root,image=self.photoimg3)
@@ -93,7 +93,7 @@ class Student:
         Left_frame.place(x=10,y=10,width=730,height=580)
 
         img_left=Image.open(r"college_images\AdobeStock_303989091.jpeg")
-        img_left=img_left.resize((720,130),Image.ANTIALIAS)
+        img_left=img_left.resize((720,130),Image.LANCZOS)
         self.photoimg_left=ImageTk.PhotoImage(img_left)
 
         f_lbl=Label(Left_frame,image=self.photoimg_left)
@@ -258,7 +258,7 @@ class Student:
         Right_frame.place(x=750,y=10,width=720,height=580)
 
         img_right=Image.open(r"college_images\gettyimages-1022573162.jpg")
-        img_right=img_right.resize((720,130),Image.ANTIALIAS)
+        img_right=img_right.resize((720,130),Image.LANCZOS)
         self.photoimg_right=ImageTk.PhotoImage(img_right)
 
         f_lbl=Label(Right_frame,image=self.photoimg_right)
@@ -343,7 +343,7 @@ class Student:
             messagebox.showerror("Error","All Fields are required",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                 my_cursor=conn.cursor()
                 my_cursor.execute("insert into student values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                                                                                                                 self.var_dep.get(),
@@ -371,7 +371,7 @@ class Student:
 
                 #fetch data
     def fetch_data(self):
-        conn=mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+        conn=mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
         my_cursor=conn.cursor() 
         my_cursor.execute("select * from student")
         data=my_cursor.fetchall()
@@ -413,7 +413,7 @@ class Student:
             try:
                 Update=messagebox.askyesno("Update","Do you want to update this student details",parent=self.root)
                 if Update>0:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                     my_cursor=conn.cursor()
                     my_cursor.execute("update student set dep=%s,course=%s,Year=%s,Semester=%s,Name=%s,Division=%s,Roll=%s,Gender=%s,Dob=%s,Email=%s,Phone=%s,Address=%s,Teacher=%s,PhotoSample=%s where Student_id=%s",(
                                                                                                                                                                                     
@@ -452,7 +452,7 @@ class Student:
             try:
                 delete=messagebox.askyesno("Student Delete Page","Do you want to delete this student",parent=self.root)
                 if delete>0:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                     my_cursor=conn.cursor() 
                     sql="delete from student where Student_id=%s"
                     val=(self.va_std_id.get(),)
@@ -492,7 +492,7 @@ class Student:
             messagebox.showerror("Error","All Fields are required",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                 my_cursor=conn.cursor()
                 my_cursor.execute("select * from student")
                 myresult=my_cursor.fetchall()

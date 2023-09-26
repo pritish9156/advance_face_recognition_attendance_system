@@ -34,7 +34,7 @@ class Train:
         time()
 
         img_top=Image.open(r"college_images\facialrecognition.png")
-        img_top=img_top.resize((1530,325),Image.ANTIALIAS)
+        img_top=img_top.resize((1530,325),Image.LANCZOS)
         self.photoimg_top=ImageTk.PhotoImage(img_top)
 
         f_lbl=Label(self.root,image=self.photoimg_top)
@@ -44,7 +44,7 @@ class Train:
         b1_1.place(x=0,y=380,width=1530,height=60)
 
         img_bottom=Image.open(r"college_images\opencv_face_reco_more_data.jpg")
-        img_bottom=img_bottom.resize((1530,325),Image.ANTIALIAS)
+        img_bottom=img_bottom.resize((1530,325),Image.LANCZOS)
         self.photoimg_bottom=ImageTk.PhotoImage(img_bottom)
 
         f_lbl=Label(self.root,image=self.photoimg_bottom)

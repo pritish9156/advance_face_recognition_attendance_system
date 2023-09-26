@@ -26,7 +26,7 @@ class Face_Recognition_System:
         #first image
 
         img=Image.open(r"college_images\BestFacialRecognition.jpg")
-        img=img.resize((500,130),Image.ANTIALIAS)
+        img=img.resize((500,130),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
         f_lbl=Label(self.root,image=self.photoimg)
@@ -34,7 +34,7 @@ class Face_Recognition_System:
              
              #second image
         img1=Image.open(r"college_images\facialrecognition.png")
-        img1=img1.resize((500,130),Image.ANTIALIAS)
+        img1=img1.resize((500,130),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
            
         f_lbl=Label(self.root,image=self.photoimg1)
@@ -42,7 +42,7 @@ class Face_Recognition_System:
                
                #third image
         img2=Image.open(r"college_images\images.jpg")
-        img2=img2.resize((600,130),Image.ANTIALIAS)
+        img2=img2.resize((600,130),Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
         f_lbl=Label(self.root,image=self.photoimg2)
@@ -51,7 +51,7 @@ class Face_Recognition_System:
         #bg image
 
         img3=Image.open(r"college_images\bg.jpg")
-        img3=img3.resize((1540,710),Image.ANTIALIAS)
+        img3=img3.resize((1540,710),Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
         bg_img=Label(self.root,image=self.photoimg3)
@@ -74,7 +74,7 @@ class Face_Recognition_System:
 
         #student button
         img4=Image.open(r"college_images\gettyimages-1022573162.jpg")
-        img4=img4.resize((220,220),Image.ANTIALIAS)
+        img4=img4.resize((220,220),Image.LANCZOS)
         self.photoimg4=ImageTk.PhotoImage(img4)
 
         b1=Button(bg_img,image=self.photoimg4,command=self.student_detail,cursor="hand2")
@@ -86,7 +86,7 @@ class Face_Recognition_System:
       #detect face
 
         img5=Image.open(r"college_images\face_detector1.jpg")
-        img5=img5.resize((220,220),Image.ANTIALIAS)
+        img5=img5.resize((220,220),Image.LANCZOS)
         self.photoimg5=ImageTk.PhotoImage(img5)
 
         b1=Button(bg_img,image=self.photoimg5,cursor="hand2",command=self.face_data)
@@ -98,7 +98,7 @@ class Face_Recognition_System:
         #attendace
 
         img6=Image.open(r"college_images\report.jpg")
-        img6=img6.resize((220,220),Image.ANTIALIAS)
+        img6=img6.resize((220,220),Image.LANCZOS)
         self.photoimg6=ImageTk.PhotoImage(img6)
 
         b1=Button(bg_img,command=self.attendance_data,image=self.photoimg6,cursor="hand2")
@@ -110,7 +110,7 @@ class Face_Recognition_System:
         #helpdesk
 
         img7=Image.open(r"college_images\help-desk-customer-care-team-icon-blue-square-button-isolated-reflected-abstract-illustration-89657179.jpg")
-        img7=img7.resize((220,220),Image.ANTIALIAS)
+        img7=img7.resize((220,220),Image.LANCZOS)
         self.photoimg7=ImageTk.PhotoImage(img7)
 
         b1=Button(bg_img,command=self.Help_data,image=self.photoimg7,cursor="hand2")
@@ -122,7 +122,7 @@ class Face_Recognition_System:
           #train the face
 
         img8=Image.open(r"college_images\Train.jpg")
-        img8=img8.resize((220,220),Image.ANTIALIAS)
+        img8=img8.resize((220,220),Image.LANCZOS)
         self.photoimg8=ImageTk.PhotoImage(img8)
 
         b1=Button(bg_img,image=self.photoimg8,cursor="hand2",command=self.train_data)
@@ -134,7 +134,7 @@ class Face_Recognition_System:
          #Photos
 
         img9=Image.open(r"college_images\sample.jpg")
-        img9=img9.resize((220,220),Image.ANTIALIAS)
+        img9=img9.resize((220,220),Image.LANCZOS)
         self.photoimg9=ImageTk.PhotoImage(img9)
 
         b1=Button(bg_img,image=self.photoimg9,cursor="hand2",command=self.open_img)
@@ -146,7 +146,7 @@ class Face_Recognition_System:
         #Developer
 
         img10=Image.open(r"college_images\Team-Management-Software-Development.jpg")
-        img10=img10.resize((220,220),Image.ANTIALIAS)
+        img10=img10.resize((220,220),Image.LANCZOS)
         self.photoimg10=ImageTk.PhotoImage(img10)
 
         b1=Button(bg_img,command=self.dev_data,image=self.photoimg10,cursor="hand2")
@@ -158,7 +158,7 @@ class Face_Recognition_System:
         #Exit
 
         img11=Image.open(r"college_images\exit.jpg")
-        img11=img11.resize((220,220),Image.ANTIALIAS)
+        img11=img11.resize((220,220),Image.LANCZOS)
         self.photoimg11=ImageTk.PhotoImage(img11)
 
         b1=Button(bg_img,command=self.Close,image=self.photoimg11,cursor="hand2")

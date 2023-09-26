@@ -22,7 +22,7 @@ class Developer:
 # This part is image labels setting start 
         # first header image  
         img=Image.open(r"college_images\banner1.jpg")
-        img=img.resize((1540,130),Image.ANTIALIAS)
+        img=img.resize((1540,130),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
         # set image as lable
@@ -31,7 +31,7 @@ class Developer:
 
         # backgorund image 
         bg1=Image.open(r"college_images\bg.png")
-        bg1=bg1.resize((1550,790),Image.ANTIALIAS)
+        bg1=bg1.resize((1550,790),Image.LANCZOS)
         self.photobg1=ImageTk.PhotoImage(bg1)
 
         # set image as lable
@@ -61,7 +61,7 @@ class Developer:
 
         # Detect Face  button 2
         det_img_btn=Image.open(r"college_images\Screenshot_2023-03-25-19-27-14-42_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg")
-        det_img_btn=det_img_btn.resize((180,180),Image.ANTIALIAS)
+        det_img_btn=det_img_btn.resize((180,180),Image.LANCZOS)
         self.det_img1=ImageTk.PhotoImage(det_img_btn)
 
         det_b1 = Button(bg_img,command=self.Linkdin,image=self.det_img1,cursor="hand2",)
@@ -72,7 +72,7 @@ class Developer:
 
          # Attendance System  button 3
         att_img_btn=Image.open(r"college_images\IMG_20200410_163923.jpg")
-        att_img_btn=att_img_btn.resize((180,180),Image.ANTIALIAS)
+        att_img_btn=att_img_btn.resize((180,180),Image.LANCZOS)
         self.att_img1=ImageTk.PhotoImage(att_img_btn)
 
         att_b1 = Button(bg_img,command=self.Instagram,image=self.att_img1,cursor="hand2",)

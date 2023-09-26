@@ -145,7 +145,7 @@ class Register:
         else:
             # messagebox.showinfo("Successfully","Successfully Register!")
             try:
-                conn = mysql.connector.connect(host="localhost",username="root",password="9156",database="face_recognizer")
+                conn = mysql.connector.connect(host="localhost",user="root",password="root123",database="face_recognizer")
                 mycursor = conn.cursor()
                 query=("select * from regteach where email=%s")
                 value=(self.var_email.get(),)
