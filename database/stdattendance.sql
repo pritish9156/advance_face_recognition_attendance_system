@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `stdattendance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stdattendance` (
-  `ID` varchar(45) DEFAULT NULL,
-  `Roll_no` varchar(45) DEFAULT NULL,
-  `Name` varchar(45) DEFAULT NULL,
-  `Time` varchar(45) DEFAULT NULL,
-  `Date` varchar(45) DEFAULT NULL,
-  `Attend` varchar(45) DEFAULT NULL
+  `std_id` varchar(45) DEFAULT NULL,
+  `std_roll_no` varchar(45) DEFAULT NULL,
+  `std_name` varchar(45) DEFAULT NULL,
+  `std_time` varchar(45) DEFAULT NULL,
+  `std_date` varchar(45) DEFAULT NULL,
+  `std_attendance` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,7 +38,7 @@ CREATE TABLE `stdattendance` (
 
 LOCK TABLES `stdattendance` WRITE;
 /*!40000 ALTER TABLE `stdattendance` DISABLE KEYS */;
-INSERT INTO `stdattendance` VALUES ('1','12',' pwr',' 15:33:36',' 26/09/2023',' Present');
+INSERT INTO `stdattendance` VALUES ('1','12',' pwr',' 15:33:36',' 26/09/2023','Present');
 /*!40000 ALTER TABLE `stdattendance` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-26 15:36:40
+-- Dump completed on 2023-09-26 19:28:12
